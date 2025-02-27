@@ -1,0 +1,22 @@
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+}
+
+group 'com.github.xiongwenxuan'
+version '1.4.3'
+
+repositories {
+    mavenCentral()
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'com.github.xiongwenxuan'
+            artifactId = 'zBarLibary'
+            version = '1.4.3'
+            artifact file('zbarlibary-release.aar')
+        }
+    }
+}
